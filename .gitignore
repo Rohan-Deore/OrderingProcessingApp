@@ -1,7 +1,18 @@
+/.vs
+OrderProcessing/OrderProcessing (Package)/OrderProcessing (Package).assets.cache
+
 
 /OrderProcessing/OrderProcessing (Package)/bin
 /OrderProcessing/OrderProcessing (Package)/obj
 /OrderProcessing/OrderProcessing/bin
 /OrderProcessing/OrderProcessing/obj
-/.vs
-OrderProcessing/OrderProcessing (Package)/OrderProcessing (Package).assets.cache
+/Model/bin
+/Model/obj
+/OrderProcessing_MAUI/bin
+/OrderProcessing_MAUI/obj
+/OrderProcessing_MAUIHybrid/bin
+/OrderProcessing_MAUIHybrid/obj
+/VIewModel/bin
+/VIewModel/obj
+/WebAPI_DB/bin
+/WebAPI_DB/obj
