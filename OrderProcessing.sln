@@ -5,7 +5,7 @@ VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "OrderProcessing (Package)", "OrderProcessing\OrderProcessing (Package)\OrderProcessing (Package).wapproj", "{6FB977B6-604B-4415-AE2D-9D8C69CECC6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderProcessing", "OrderProcessing\OrderProcessing\OrderProcessing.csproj", "{127878AE-7BED-4C6F-96C3-5063AF8B08DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderProcessing", "OrderProcessing\OrderProcessing\OrderProcessing.csproj", "{127878AE-7BED-4C6F-96C3-5063AF8B08DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,6 +14,8 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{6FB977B6-604B-4415-AE2D-9D8C69CECC6D}.Debug|x64.ActiveCfg = Debug|x64
+		{6FB977B6-604B-4415-AE2D-9D8C69CECC6D}.Debug|x64.Build.0 = Debug|x64
+		{6FB977B6-604B-4415-AE2D-9D8C69CECC6D}.Debug|x64.Deploy.0 = Debug|x64
 		{6FB977B6-604B-4415-AE2D-9D8C69CECC6D}.Release|x64.ActiveCfg = Release|x64
 		{6FB977B6-604B-4415-AE2D-9D8C69CECC6D}.Release|x64.Build.0 = Release|x64
 		{6FB977B6-604B-4415-AE2D-9D8C69CECC6D}.Release|x64.Deploy.0 = Release|x64
