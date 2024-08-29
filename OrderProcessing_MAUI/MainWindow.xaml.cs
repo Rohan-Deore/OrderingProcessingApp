@@ -13,19 +13,20 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using Windows.Media.SpeechRecognition;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
 
-namespace OrderProcessing
+namespace OrderProcessing_MAUI1
 {
     /// <summary>
     /// An empty window that can be used on its own or navigated to within a Frame.
     /// </summary>
     public sealed partial class MainWindow : Window
     {
+
         public ObservableCollection<string> NavLinks = new ObservableCollection<string>() { "Rohan", "Deore" };
+
 
         public MainWindow()
         {
@@ -34,7 +35,7 @@ namespace OrderProcessing
 
         private void myButton_Click(object sender, RoutedEventArgs e)
         {
-            myButton.Content = "Clicked";
+            //myButton.Content = "Clicked";
         }
 
         private void NavLinksList_ItemClick(object sender, ItemClickEventArgs e)

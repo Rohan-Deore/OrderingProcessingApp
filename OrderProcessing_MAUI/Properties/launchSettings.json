@@ -1,8 +1,10 @@
 {
   "profiles": {
-    "Windows Machine": {
-      "commandName": "MsixPackage",
-      "nativeDebugging": false
+    "OrderProcessing_MAUI1 (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "OrderProcessing_MAUI1 (Unpackaged)": {
+      "commandName": "Project"
     }
   }
 }
