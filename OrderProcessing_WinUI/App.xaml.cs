@@ -43,6 +43,7 @@ namespace OrderProcessing_WinUI
         {
             m_window = new MainWindow();
             m_window.Activate();
+            m_window.ExtendsContentIntoTitleBar = true;
         }
 
         private Window m_window;
