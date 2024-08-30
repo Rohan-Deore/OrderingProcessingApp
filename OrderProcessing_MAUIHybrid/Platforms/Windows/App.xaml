@@ -1,8 +1,0 @@
-﻿<maui:MauiWinUIApplication
-    x:Class="OrderProcessing_MAUIHybrid.WinUI.App"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:maui="using:Microsoft.Maui"
-    xmlns:local="using:OrderProcessing_MAUIHybrid.WinUI">
-
-</maui:MauiWinUIApplication>
