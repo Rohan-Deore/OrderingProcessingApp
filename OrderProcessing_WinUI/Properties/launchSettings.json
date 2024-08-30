@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "OrderProcessing_WinUI (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "OrderProcessing_WinUI (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
