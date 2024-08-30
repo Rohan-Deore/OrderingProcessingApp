@@ -46,6 +46,7 @@
         <AppInstallerUri>D:\Code\Samples\OrderProcessingApp\Publish</AppInstallerUri>
         <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
         <Platforms>AnyCPU;x64</Platforms>
+        <Configurations>Debug;Release;Development</Configurations>
     </PropertyGroup>
 
     <ItemGroup>

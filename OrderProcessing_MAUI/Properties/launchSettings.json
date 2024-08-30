@@ -1,9 +1,9 @@
 {
   "profiles": {
-    "OrderProcessing_MAUI1 (Package)": {
+    "OrderProcessing_MAUI (Package)": {
       "commandName": "MsixPackage"
     },
-    "OrderProcessing_MAUI1 (Unpackaged)": {
+    "OrderProcessing_MAUI (Unpackaged)": {
       "commandName": "Project"
     }
   }
