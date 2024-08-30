@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UserControl
+    x:Class="OrderProcessing_WinUI.OrderControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OrderProcessing_WinUI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+        <!--This will contain template for single order
+        and Order details will display this user control in details-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        
+        <TextBlock Grid.Column="0" Text="No." />
+        <TextBlock Grid.Column="1" Text="Product name" />
+        <TextBlock Grid.Column="2" Text="Quantity" />
+        <TextBlock Grid.Column="3" Text="Rate" />
+        <TextBlock Grid.Column="4" Text="Comments" />
+    </Grid>
+</UserControl>
