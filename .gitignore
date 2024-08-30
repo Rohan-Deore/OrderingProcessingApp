@@ -16,3 +16,5 @@ OrderProcessing/OrderProcessing (Package)/OrderProcessing (Package).assets.cache
 /VIewModel/obj
 /WebAPI_DB/bin
 /WebAPI_DB/obj
+/OrderProcessing_WinUI/bin/
+/OrderProcessing_WinUI/obj/
