@@ -8,10 +8,42 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    <!--xmlns:uwp_ui="Microsoft.Toolkit.Uwp.UI.Controls"-->
+    <Page.Resources>
+        <DataTemplate x:Key="OrderTemplate" x:DataType="local:Author">
+            <ItemContainer>
+                <StackPanel>
+                    <TextBlock Text="{x:Bind Name}"/>
+                    <TextBlock Text="{x:Bind BookTitle}"/>
+                </StackPanel>
+            </ItemContainer>
+        </DataTemplate>
+    </Page.Resources>
+    
     <Grid>
-        <!--<uwp_ui:DataGrid x:Name="OrderGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="40"/>
+            <!--<RowDefinition Height="40"/>-->
+        </Grid.RowDefinitions>
+        
+        <TextBlock Grid.Column="0" Text="No." />
+        <TextBlock Grid.Column="1" Text="Product name" />
+        <TextBlock Grid.Column="2" Text="Quantity" />
+        <TextBlock Grid.Column="3" Text="Rate" />
+        <TextBlock Grid.Column="4" Text="Comments" />
+        <ItemsView ItemsSource="{Binding Authors}" Grid.Row="1" Grid.ColumnSpan="5" ItemTemplate="{StaticResource OrderTemplate}">
             
-        </uwp_ui:DataGrid>-->
+            
+        </ItemsView>
+
+        <!--<local:OrderControl />
+        <local:OrderControl />-->
     </Grid>
 </Page>

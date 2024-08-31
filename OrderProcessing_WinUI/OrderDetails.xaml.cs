@@ -7,6 +7,7 @@ using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -32,12 +33,14 @@ namespace OrderProcessing_WinUI
     /// </summary>
     public sealed partial class OrderDetails : Page
     {
+        public ObservableCollection<Author> Authors = new ObservableCollection<Author>();
+
         public OrderDetails()
         {
             this.InitializeComponent();
 
-            List<Author> authors = new List<Author>();
-            authors.Add(new Author()
+            
+            Authors.Add(new Author()
             {
                 ID = 101,
                 Name = "Mahesh Chand",
@@ -46,7 +49,7 @@ namespace OrderProcessing_WinUI
                 IsMVP = false
             });
 
-            authors.Add(new Author()
+            Authors.Add(new Author()
             {
                 ID = 201,
                 Name = "Mike Gold",
@@ -55,7 +58,7 @@ namespace OrderProcessing_WinUI
                 IsMVP = true
             });
 
-            authors.Add(new Author()
+            Authors.Add(new Author()
             {
                 ID = 244,
                 Name = "Mathew Cochran",

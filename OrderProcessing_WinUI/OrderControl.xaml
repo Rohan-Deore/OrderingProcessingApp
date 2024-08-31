@@ -12,18 +12,22 @@
         <!--This will contain template for single order
         and Order details will display this user control in details-->
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
         
-        
-        <TextBlock Grid.Column="0" Text="No." />
-        <TextBlock Grid.Column="1" Text="Product name" />
-        <TextBlock Grid.Column="2" Text="Quantity" />
-        <TextBlock Grid.Column="3" Text="Rate" />
-        <TextBlock Grid.Column="4" Text="Comments" />
+        <TextBox Grid.Column="0" Text="{Binding Name}"/>
+        <TextBox Grid.Column="1" Text="{Binding BookTitle}"/>
+        <TextBox Grid.Column="2"/>
+        <TextBox Grid.Column="3"/>
+        <TextBox Grid.Column="4"/>
+
+
     </Grid>
 </UserControl>
