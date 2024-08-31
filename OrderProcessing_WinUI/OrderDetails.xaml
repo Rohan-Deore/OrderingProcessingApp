@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="OrderProcessing_WinUI.OrderDetails"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OrderProcessing_WinUI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <DataTemplate x:Key="OrderTemplate" x:DataType="local:Author">
+            <ItemContainer>
+                <StackPanel>
+                    <TextBlock Text="{x:Bind Name}"/>
+                    <TextBlock Text="{x:Bind BookTitle}"/>
+                </StackPanel>
+            </ItemContainer>
+        </DataTemplate>
+    </Page.Resources>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="40"/>
+            <!--<RowDefinition Height="40"/>-->
+        </Grid.RowDefinitions>
+        
+        <TextBlock Grid.Column="0" Text="No." />
+        <TextBlock Grid.Column="1" Text="Product name" />
+        <TextBlock Grid.Column="2" Text="Quantity" />
+        <TextBlock Grid.Column="3" Text="Rate" />
+        <TextBlock Grid.Column="4" Text="Comments" />
+        <ItemsView ItemsSource="{Binding Authors}" Grid.Row="1" Grid.ColumnSpan="5" ItemTemplate="{StaticResource OrderTemplate}">
+            
+            
+        </ItemsView>
+
+        <!--<local:OrderControl />
+        <local:OrderControl />-->
+    </Grid>
+</Page>
