@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ViewModel
+﻿namespace ViewModel
 {
     public class MainViewModel : ViewModelBase
     {
         IUiService UiService;
 
-        private string someValue;
+        public CustomerDetailsVM CustomerDetailsVM { get; private set; } = new CustomerDetailsVM();
+        public OrderDetailsVM OrderDetailsVM { get; private set; } = new OrderDetailsVM();
+
+        private string someValue = "Rohan Deore";
 
         public string SomeValue
         {
