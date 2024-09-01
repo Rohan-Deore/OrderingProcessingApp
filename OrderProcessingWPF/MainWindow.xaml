@@ -6,7 +6,29 @@
         xmlns:local="clr-namespace:OrderProcessingWPF"
         mc:Ignorable="d"
         Title="Order Processing" Height="450" Width="800">
-    <Grid>
 
-    </Grid>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="New"/>
+                <Separator/>
+                <MenuItem Header="Quit"/>
+            </MenuItem>
+            <MenuItem Header="_Edit">
+                <MenuItem Command="ApplicationCommands.Copy"/>
+                <MenuItem Command="ApplicationCommands.Cut"/>
+                <MenuItem Command="ApplicationCommands.Paste"/>
+            </MenuItem>
+        </Menu>
+        <Grid>
+            <TabControl TabStripPlacement="Left">
+                <TabItem Header="{Binding Path=CustomerDetailsVM.TabName}" Padding="10" Content="{Binding CustomerDetailsVM}">
+                    
+                </TabItem>
+                <TabItem Header="{Binding Path=OrderDetailsVM.TabName}" Padding="10" Content="{Binding OrderDetailsVM}">
+                    
+                </TabItem>
+            </TabControl>
+        </Grid>
+    </DockPanel>
 </Window>

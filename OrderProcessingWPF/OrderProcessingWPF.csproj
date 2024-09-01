@@ -9,4 +9,8 @@
     <Platforms>x64</Platforms>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\VIewModel\ViewModel.csproj" />
+  </ItemGroup>
+
 </Project>
