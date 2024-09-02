@@ -25,8 +25,8 @@
                 <TabItem Header="{Binding Path=CustomerDetailsVM.TabName}" Padding="10">
                     <local:CustomerDetails/>
                 </TabItem>
-                <TabItem Header="{Binding Path=OrderDetailsVM.TabName}" Padding="10" Content="{Binding OrderDetailsVM}">
-                    
+                <TabItem Header="{Binding Path=OrderDetailsVM.TabName}" Padding="10">
+                    <local:OrderDetails/>
                 </TabItem>
             </TabControl>
         </Grid>
