@@ -60,6 +60,24 @@ namespace ViewModel
             }
         }
 
+        private string customerLocation = string.Empty;
+
+        public string CustomerLocation
+        {
+            get 
+            {
+                return customerLocation;
+            }
+            set 
+            {
+                if (customerLocation != value)
+                {
+                    customerLocation = value;
+                    OnPropertyChanged(nameof(CustomerLocation));
+                }
+            }
+        }
+
         public OrderDetailsVM() 
         {
             orders.Add(new Order { PartID = 1, PartName = "Machine 1" });
