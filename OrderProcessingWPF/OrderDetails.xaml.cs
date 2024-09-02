@@ -24,7 +24,6 @@ namespace OrderProcessingWPF
         public OrderDetails()
         {
             InitializeComponent();
-            DataContext = new OrderDetailsVM();
         }
     }
 }

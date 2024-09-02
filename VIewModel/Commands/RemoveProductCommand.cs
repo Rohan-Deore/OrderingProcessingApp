@@ -8,13 +8,18 @@ namespace ViewModel.Commands
 {
     public class RemoveProductCommand : CommandBase
     {
-        public RemoveProductCommand() 
+        internal OrderDetailsVM ViewModelBase { get; }
+        public RemoveProductCommand(OrderDetailsVM vmBase, IUiService service) : base(service)
         { 
+            ViewModelBase = vmBase;
         }
 
         public override void Execute(object? parameter)
         {
-            
+            if (parameter != null && parameter is Order)
+            {
+                ViewModelBase.Orders.Remove(parameter as Order);
+            }
         }
     }
 }

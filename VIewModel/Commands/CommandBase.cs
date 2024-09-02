@@ -9,7 +9,14 @@ namespace ViewModel.Commands
 {
     public abstract class CommandBase : ICommand
     {
+        internal IUiService uiService;
+
         public event EventHandler? CanExecuteChanged;
+
+        public CommandBase(IUiService service)
+        {
+            uiService = service;
+        }
 
         public bool CanExecute(object? parameter)
         {

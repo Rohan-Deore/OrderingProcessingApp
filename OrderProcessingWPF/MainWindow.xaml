@@ -23,10 +23,10 @@
         <Grid>
             <TabControl TabStripPlacement="Left">
                 <TabItem Header="{Binding Path=CustomerDetailsVM.TabName}" Padding="10">
-                    <local:CustomerDetails/>
+                    <local:CustomerDetails DataContext="{Binding CustomerDetailsVM}"/>
                 </TabItem>
                 <TabItem Header="{Binding Path=OrderDetailsVM.TabName}" Padding="10">
-                    <local:OrderDetails/>
+                    <local:OrderDetails DataContext="{Binding OrderDetailsVM}"/>
                 </TabItem>
             </TabControl>
         </Grid>

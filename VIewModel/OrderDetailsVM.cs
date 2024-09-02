@@ -82,11 +82,6 @@ namespace ViewModel
         {
             get
             {
-                if (addProductCommand == null)
-                {
-                    addProductCommand = new AddProductCommand();
-                }
-
                 return addProductCommand;
             }
         }
@@ -97,11 +92,6 @@ namespace ViewModel
         { 
             get
             {
-                if (removeProductCommand == null)
-                {
-                    removeProductCommand = new RemoveProductCommand();
-                }
-
                 return removeProductCommand;
             }
         }
@@ -114,8 +104,26 @@ namespace ViewModel
             orders.Add(new Order { PartID = 2, PartName = "Machine 2" });
             orders.Add(new Order { PartID = 3, PartName = "Machine 3" });
             orders.Add(new Order { PartID = 4, PartName = "Machine 4" });
-
+            
             uiService = service;
+
+            addProductCommand = new AddProductCommand(this, service);
+            removeProductCommand = new RemoveProductCommand(this, service);
+        }
+
+        private Order selectedRow;
+
+        public Order SelectedRow
+        {
+            get { return selectedRow; }
+            set
+            {
+                if (selectedRow != value)
+                {
+                    selectedRow = value;
+                    OnPropertyChanged("SelectedRow");
+                }
+            }
         }
     }
 }

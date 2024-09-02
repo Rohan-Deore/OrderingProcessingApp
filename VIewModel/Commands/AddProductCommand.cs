@@ -8,13 +8,15 @@ namespace ViewModel.Commands
 {
     public class AddProductCommand : CommandBase
     {
-        public AddProductCommand() 
+        internal OrderDetailsVM ViewModelBase { get; }
+        public AddProductCommand(OrderDetailsVM vmBase, IUiService service) : base(service) 
         {
+            ViewModelBase = vmBase;
         }
 
         public override void Execute(object? parameter)
         {
-            
+            ViewModelBase.Orders.Add(new Order());
         }
     }
 }

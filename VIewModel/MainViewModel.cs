@@ -4,8 +4,8 @@
     {
         IUiService UiService;
 
-        public CustomerDetailsVM CustomerDetailsVM { get; private set; } = new CustomerDetailsVM();
-        public OrderDetailsVM OrderDetailsVM { get; private set; } = new OrderDetailsVM();
+        public CustomerDetailsVM CustomerDetailsVM { get; private set; }
+        public OrderDetailsVM OrderDetailsVM { get; private set; }
 
         public MainViewModel(IUiService uiService)
         {
