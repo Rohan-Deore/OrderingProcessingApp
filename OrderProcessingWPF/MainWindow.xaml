@@ -22,8 +22,8 @@
         </Menu>
         <Grid>
             <TabControl TabStripPlacement="Left">
-                <TabItem Header="{Binding Path=CustomerDetailsVM.TabName}" Padding="10" Content="{Binding CustomerDetailsVM}">
-                    
+                <TabItem Header="{Binding Path=CustomerDetailsVM.TabName}" Padding="10">
+                    <local:CustomerDetails/>
                 </TabItem>
                 <TabItem Header="{Binding Path=OrderDetailsVM.TabName}" Padding="10" Content="{Binding OrderDetailsVM}">
                     
