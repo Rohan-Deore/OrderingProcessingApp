@@ -1,8 +1,9 @@
 ﻿using System.Collections.ObjectModel;
+using ViewModel.Commands;
 
 namespace ViewModel
 {
-    public class Order : ViewModelBase
+    public class Order
     {
         private string partName = string.Empty;
         public string PartName 
@@ -16,7 +17,6 @@ namespace ViewModel
                 if (partName != value)
                 {
                     partName = value;
-                    OnPropertyChanged(nameof(PartName));
                 }
             }
         }
@@ -35,7 +35,6 @@ namespace ViewModel
                 if (partID != value)
                 {
                     partID = value;
-                    OnPropertyChanged(nameof(PartID));
                 }
             }
         }
@@ -75,6 +74,35 @@ namespace ViewModel
                     customerLocation = value;
                     OnPropertyChanged(nameof(CustomerLocation));
                 }
+            }
+        }
+
+        private AddProductCommand addProductCommand;
+        public AddProductCommand AddProductCommand 
+        {
+            get
+            {
+                if (addProductCommand == null)
+                {
+                    addProductCommand = new AddProductCommand();
+                }
+
+                return addProductCommand;
+            }
+        }
+
+        private RemoveProductCommand removeProductCommand;
+
+        public RemoveProductCommand RemoveProductCommand
+        { 
+            get
+            {
+                if (removeProductCommand == null)
+                {
+                    removeProductCommand = new RemoveProductCommand();
+                }
+
+                return removeProductCommand;
             }
         }
 
