@@ -7,23 +7,11 @@
         public CustomerDetailsVM CustomerDetailsVM { get; private set; } = new CustomerDetailsVM();
         public OrderDetailsVM OrderDetailsVM { get; private set; } = new OrderDetailsVM();
 
-        private string someValue = "Rohan Deore";
-
-        public string SomeValue
+        public MainViewModel(IUiService uiService)
         {
-            get
-            {
-                return someValue;
-            }
-            set
-            {
-                if (value != someValue)
-                {
-                    someValue = value;
-                }
-
-                OnPropertyChanged("SomeValue");
-            }
+            UiService = uiService;
+            CustomerDetailsVM = new CustomerDetailsVM(uiService);
+            OrderDetailsVM = new OrderDetailsVM(uiService);
         }
     }
 }

@@ -75,5 +75,12 @@
                 }
             }
         }
+
+        private IUiService uiService;
+
+        public CustomerDetailsVM(IUiService service)
+        {
+            uiService = service;
+        }
     }
 }

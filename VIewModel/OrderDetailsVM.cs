@@ -106,12 +106,16 @@ namespace ViewModel
             }
         }
 
-        public OrderDetailsVM() 
+        private IUiService uiService;
+
+        public OrderDetailsVM(IUiService service) 
         {
             orders.Add(new Order { PartID = 1, PartName = "Machine 1" });
             orders.Add(new Order { PartID = 2, PartName = "Machine 2" });
             orders.Add(new Order { PartID = 3, PartName = "Machine 3" });
             orders.Add(new Order { PartID = 4, PartName = "Machine 4" });
+
+            uiService = service;
         }
     }
 }

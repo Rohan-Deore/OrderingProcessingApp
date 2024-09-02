@@ -8,10 +8,12 @@ namespace OrderProcessingWPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        public IUiService UiService { get; } = new UIService();
+
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new MainViewModel();
+            DataContext = new MainViewModel(UiService);
         }
     }
 }

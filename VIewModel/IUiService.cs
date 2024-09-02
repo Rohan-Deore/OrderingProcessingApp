@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace ViewModel
 {
-    public class IUiService
+    public interface IUiService
     {
-
+        public void ShowUserMessage(string msg);
     }
 }
