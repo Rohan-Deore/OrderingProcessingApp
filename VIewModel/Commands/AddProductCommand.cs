@@ -16,7 +16,6 @@ namespace ViewModel.Commands
 
         public override void Execute(object? parameter)
         {
-            ViewModelBase.Orders.Add(new Order());
         }
     }
 }
