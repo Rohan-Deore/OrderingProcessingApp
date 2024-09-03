@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OrderProcessing_MAUI.MainPage">
+
+    
+    <ScrollView>
+        <VerticalStackLayout>
+             <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Text="Customer name" VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Center"></Label>
+                <Entry Grid.Row="0" Grid.Column="1" Placeholder="Customer name" HorizontalTextAlignment="Center"></Entry>
+                <Label Grid.Row="1" Grid.Column="0" Text="Customer location" VerticalOptions="Center" HorizontalTextAlignment="Center"></Label>
+                <Entry Grid.Row="1" Grid.Column="1" Placeholder="Customer location" HorizontalTextAlignment="Center"></Entry>
+                <Label Grid.Row="2" Grid.Column="0" Text="Order date" HorizontalTextAlignment="Center"></Label>
+                <DatePicker Grid.Row="2" Grid.Column="1"></DatePicker>
+                <Label Grid.Row="3" Grid.Column="0" Text="Delivery date" HorizontalTextAlignment="Center"></Label>
+                <DatePicker Grid.Row="3" Grid.Column="1"></DatePicker>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
