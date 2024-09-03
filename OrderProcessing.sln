@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI_DB", "WebAPI_DB\WebA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderProcessing_WinUI", "OrderProcessing_WinUI\OrderProcessing_WinUI.csproj", "{C364A232-8F4D-4B00-BAE2-DE896A3E040A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderProcessingWPF", "OrderProcessingWPF\OrderProcessingWPF.csproj", "{423153A0-06EC-435B-AFF2-18184FC909C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderProcessingWPF", "OrderProcessingWPF\OrderProcessingWPF.csproj", "{423153A0-06EC-435B-AFF2-18184FC909C8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderProcessing_MAUI", "OrderProcessing_MAUI\OrderProcessing_MAUI.csproj", "{F2FCCD80-4E7C-4BF9-9578-AC8550798EF7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,16 +51,21 @@ Global
 		{C364A232-8F4D-4B00-BAE2-DE896A3E040A}.Debug|x64.ActiveCfg = Debug|x64
 		{C364A232-8F4D-4B00-BAE2-DE896A3E040A}.Debug|x64.Build.0 = Debug|x64
 		{C364A232-8F4D-4B00-BAE2-DE896A3E040A}.Debug|x64.Deploy.0 = Debug|x64
-		{C364A232-8F4D-4B00-BAE2-DE896A3E040A}.Development|x64.ActiveCfg = Debug|x64
+		{C364A232-8F4D-4B00-BAE2-DE896A3E040A}.Development|x64.ActiveCfg = Development|x64
 		{C364A232-8F4D-4B00-BAE2-DE896A3E040A}.Release|x64.ActiveCfg = Release|x64
 		{C364A232-8F4D-4B00-BAE2-DE896A3E040A}.Release|x64.Build.0 = Release|x64
 		{C364A232-8F4D-4B00-BAE2-DE896A3E040A}.Release|x64.Deploy.0 = Release|x64
 		{423153A0-06EC-435B-AFF2-18184FC909C8}.Debug|x64.ActiveCfg = Debug|Any CPU
 		{423153A0-06EC-435B-AFF2-18184FC909C8}.Debug|x64.Build.0 = Debug|Any CPU
-		{423153A0-06EC-435B-AFF2-18184FC909C8}.Development|x64.ActiveCfg = Debug|x64
-		{423153A0-06EC-435B-AFF2-18184FC909C8}.Development|x64.Build.0 = Debug|x64
+		{423153A0-06EC-435B-AFF2-18184FC909C8}.Development|x64.ActiveCfg = Development|x64
+		{423153A0-06EC-435B-AFF2-18184FC909C8}.Development|x64.Build.0 = Development|x64
 		{423153A0-06EC-435B-AFF2-18184FC909C8}.Release|x64.ActiveCfg = Release|Any CPU
 		{423153A0-06EC-435B-AFF2-18184FC909C8}.Release|x64.Build.0 = Release|Any CPU
+		{F2FCCD80-4E7C-4BF9-9578-AC8550798EF7}.Debug|x64.ActiveCfg = Debug|x64
+		{F2FCCD80-4E7C-4BF9-9578-AC8550798EF7}.Development|x64.ActiveCfg = Development|x64
+		{F2FCCD80-4E7C-4BF9-9578-AC8550798EF7}.Development|x64.Build.0 = Development|x64
+		{F2FCCD80-4E7C-4BF9-9578-AC8550798EF7}.Development|x64.Deploy.0 = Development|x64
+		{F2FCCD80-4E7C-4BF9-9578-AC8550798EF7}.Release|x64.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +76,7 @@ Global
 		{28E71597-D4E7-43BC-9879-EC291826943F} = {D1E12C06-9FD7-4685-8FF8-79AA79B7043E}
 		{C364A232-8F4D-4B00-BAE2-DE896A3E040A} = {7083A003-0739-48F5-AAA7-3AF0A4469F17}
 		{423153A0-06EC-435B-AFF2-18184FC909C8} = {7083A003-0739-48F5-AAA7-3AF0A4469F17}
+		{F2FCCD80-4E7C-4BF9-9578-AC8550798EF7} = {7083A003-0739-48F5-AAA7-3AF0A4469F17}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {428842C9-50CA-4B24-8086-F2377783B57A}
