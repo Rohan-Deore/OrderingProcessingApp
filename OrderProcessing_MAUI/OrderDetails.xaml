@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OrderProcessing_MAUI.OrderDetails"
+             Title="Hard coded title" Loaded="ContentPage_Loaded">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Column="0" Text="Customer location" Margin="3"/>
+                <Entry Grid.Column="1" Placeholder="Customer location" Margin="3"/>
+                <Button Grid.Row="1" Grid.Column="0" Text="Add part" Margin="3"/>
+                <Button Grid.Row="1" Grid.Column="1" Text="Remove part" Margin="3"/>
+                <Button/>
+                <Grid x:Name="OrdersGrid" Grid.ColumnSpan="2" Grid.Row="2" Margin="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" Text="Part ID"/>
+                    <Label Grid.Row="0" Grid.Column="1" Text="Part Name"/>
+                    <Entry Grid.Row="1" Grid.Column="0" />
+                    <Entry Grid.Row="1" Grid.Column="1" />
+                </Grid>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
