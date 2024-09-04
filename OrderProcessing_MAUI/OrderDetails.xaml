@@ -28,12 +28,9 @@
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition/>
-                        <RowDefinition/>
                     </Grid.RowDefinitions>
                     <Label Grid.Row="0" Grid.Column="0" Text="Part ID"/>
                     <Label Grid.Row="0" Grid.Column="1" Text="Part Name"/>
-                    <Entry Grid.Row="1" Grid.Column="0" />
-                    <Entry Grid.Row="1" Grid.Column="1" />
                 </Grid>
             </Grid>
         </VerticalStackLayout>
