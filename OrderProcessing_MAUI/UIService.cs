@@ -1,17 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ViewModel;
+﻿using ViewModel;
+
 
 namespace OrderProcessing_MAUI
 {
     public class UIService : IUiService
     {
+        private MainPage mainPage;
+
+        public UIService(MainPage mainP)
+        {
+            mainPage = mainP;
+        }
+
         public void ShowUserMessage(string msg)
         {
-            
+            mainPage.ShowMessage(msg);
         }
     }
 }
