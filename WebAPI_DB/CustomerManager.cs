@@ -2,11 +2,10 @@
 {
     public class CustomerManager
     {
-        private List<Customer> customerData = new List<Customer>();
         private List<Orders> orderData = new List<Orders>();
         private CustomerDB customerDB = new CustomerDB();
 
-        private static CustomerManager instance;
+        private static CustomerManager? instance = null;
 
         public static CustomerManager Instance()
         {
@@ -25,19 +24,12 @@
 
         public void Add(Customer customer)
         {
-            customerData.Add(customer);
+            customerDB.AddCustomerDB(customer);
         }
 
         public void Delete(Customer customer)
         {
-            for (int i = 0; i < customerData.Count; i++)
-            {
-                if (customerData[i].Equals(customer))
-                {
-                    customerData.RemoveAt(i);
-                    break;
-                }
-            }
+            customerDB.DeleteCustomerDB(customer);
         }
 
         public List<Orders> GetOrders()

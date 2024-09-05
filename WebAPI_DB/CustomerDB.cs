@@ -59,7 +59,31 @@ namespace WebAPI_DB
                         Console.WriteLine($"Hello, {customerName}!");
                 }
             }
+
             return list;
+        }
+
+        public void AddCustomerDB(Customer customer)
+        {
+            List<Customer> list = new List<Customer>();
+            var command = connection.CreateCommand();
+            command.CommandText = @"INSERT INTO CustomerData
+                    VALUES ('$Name', '$Location');";
+            command.Parameters.AddWithValue("$Name", customer.CustomerName);
+            command.Parameters.AddWithValue("$Location", customer.CustomerLocation);
+
+            command.ExecuteNonQuery();
+        }
+
+        public void DeleteCustomerDB(Customer customer)
+        {
+            var command = connection.CreateCommand();
+            command.CommandText = @"DELETE FROM CustomerData 
+                WHERE CustomerName='$Name' AND CustomerLocation='$Location';";
+            command.Parameters.AddWithValue("$Name", customer.CustomerName);
+            command.Parameters.AddWithValue("$Location", customer.CustomerLocation);
+            
+            command.ExecuteNonQuery();
         }
 
         /// <summary>
