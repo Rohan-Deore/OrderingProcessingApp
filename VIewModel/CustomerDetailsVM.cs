@@ -78,8 +78,12 @@
 
         private IUiService uiService;
 
-        public CustomerDetailsVM(IUiService service)
+        public CustomerDetailsVM()
         {
+        }
+
+        public void SetUIService(IUiService service)
+        { 
             uiService = service;
         }
     }

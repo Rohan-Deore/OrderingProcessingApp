@@ -20,3 +20,4 @@ OrderProcessing/OrderProcessing (Package)/OrderProcessing (Package).assets.cache
 /OrderProcessing_WinUI/obj/
 /OrderProcessingWPF/bin
 /OrderProcessingWPF/obj
+/WebAPI_DB/CustomerOrders.db

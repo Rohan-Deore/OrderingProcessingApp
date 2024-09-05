@@ -16,6 +16,7 @@
                     <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
+                    <RowDefinition/>
                 </Grid.RowDefinitions>
                 <Label Grid.Row="0" Grid.Column="0" Text="Customer name" VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Center"></Label>
                 <Entry Grid.Row="0" Grid.Column="1" Placeholder="Customer name" HorizontalTextAlignment="Center"></Entry>
@@ -25,6 +26,7 @@
                 <DatePicker Grid.Row="2" Grid.Column="1"></DatePicker>
                 <Label Grid.Row="3" Grid.Column="0" Text="Delivery date" HorizontalTextAlignment="Center"></Label>
                 <DatePicker Grid.Row="3" Grid.Column="1"></DatePicker>
+                <Button Grid.Row="4" Grid.Column="0" Text="Test button" Clicked="Entry_Completed"/>
             </Grid>
         </VerticalStackLayout>
     </ScrollView>

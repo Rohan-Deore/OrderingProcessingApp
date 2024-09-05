@@ -98,13 +98,16 @@ namespace ViewModel
 
         private IUiService uiService;
 
-        public OrderDetailsVM(IUiService service) 
+        public OrderDetailsVM() 
         {
             orders.Add(new Order { PartID = 1, PartName = "Machine 1" });
             orders.Add(new Order { PartID = 2, PartName = "Machine 2" });
             orders.Add(new Order { PartID = 3, PartName = "Machine 3" });
             orders.Add(new Order { PartID = 4, PartName = "Machine 4" });
-            
+        }
+
+        public void SetUIService(IUiService service)
+        {
             uiService = service;
 
             addProductCommand = new AddProductCommand(this, service);

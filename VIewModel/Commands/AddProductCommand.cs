@@ -16,6 +16,7 @@ namespace ViewModel.Commands
 
         public override void Execute(object? parameter)
         {
+            uiService.ShowUserMessage("Pop up shown");
         }
     }
 }
