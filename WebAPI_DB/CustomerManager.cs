@@ -4,6 +4,7 @@
     {
         private List<Customer> customerData = new List<Customer>();
         private List<Orders> orderData = new List<Orders>();
+        private CustomerDB customerDB = new CustomerDB();
 
         private static CustomerManager instance;
 
@@ -19,7 +20,7 @@
 
         public List<Customer> GetCustomerData()
         {
-            return customerData;
+            return customerDB.GetAll();
         }
 
         public void Add(Customer customer)
