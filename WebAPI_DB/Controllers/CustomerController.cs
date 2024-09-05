@@ -22,13 +22,13 @@ namespace WebAPI_DB.Controllers
         [HttpPost(Name = "PostCustomer")]
         public void Post(Customer customer)
         {
-            CustomerManager.Instance().Add(customer);
+            CustomerManager.Instance().AddCustomer(customer);
         }
 
         [HttpDelete(Name = "DeleteCustomer")]
         public void Delete(Customer customer)
         {
-            CustomerManager.Instance().Delete(customer);
+            CustomerManager.Instance().DeleteCustomer(customer);
         }
     }
 }

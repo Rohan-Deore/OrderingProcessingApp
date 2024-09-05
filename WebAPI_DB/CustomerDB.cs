@@ -28,21 +28,21 @@ namespace WebAPI_DB
         {
             var command = connection.CreateCommand();
             command.CommandText = @"
-                    CREATE TABLE CustomerData (
-                        CustomerName TEXT,
-                        CustomerLocation TEXT
+                    CREATE TABLE OrderData (
+                        PartID TEXT,
+                        PartName TEXT
                     );
 
-                    INSERT INTO CustomerData
-                    VALUES ('Customer 1', 'Location 1'),
-                           ('Customer 2', 'Location 2'),
-                           ('Customer 3', 'Location 3');
+                    INSERT INTO OrderData
+                    VALUES ('Part 1', 'Name 1'),
+                           ('Part 2', 'Name 2'),
+                           ('Part 3', 'Name 3');
                 ";
 
             command.ExecuteNonQuery();
         }
 
-        public List<Customer> GetAll()
+        public List<Customer> GetCustomerAll()
         {
             List<Customer> list = new List<Customer>();
             var command = connection.CreateCommand();
@@ -83,34 +83,45 @@ namespace WebAPI_DB
             command.ExecuteNonQuery();
         }
 
-        /// <summary>
-        /// Function to refer code from, to be deleted as soon as work is done.
-        /// </summary>
-        public void SampleCode()
+        internal List<Orders> GetOrderAll()
         {
-            using (var connection = new SqliteConnection("Data Source=CustomerOrders.db"))
+            List<Orders> list = new List<Orders>();
+            var command = connection.CreateCommand();
+            command.CommandText = @"SELECT *
+                                FROM OrderData";
+            using (var reader = command.ExecuteReader())
             {
-                connection.Open();
-
-                var command = connection.CreateCommand();
-                command.CommandText =
-                                        @"
-                                SELECT name
-                                FROM user
-                                WHERE id = $id
-                            ";
-                command.Parameters.AddWithValue("$id", 1);
-
-                using (var reader = command.ExecuteReader())
+                while (reader.Read())
                 {
-                    while (reader.Read())
-                    {
-                        var name = reader.GetString(0);
+                    var partID = reader.GetString(0);
+                    var partName = reader.GetString(1);
 
-                        Console.WriteLine($"Hello, {name}!");
-                    }
+                    list.Add(new Orders() { PartID = partID, PartName = partName });
                 }
             }
+
+            return list;
         }
+
+        public void AddOrdersDB(Orders orders)
+        {
+            List<Orders> list = new List<Orders>();
+            var command = connection.CreateCommand();
+            command.CommandText = $@"INSERT INTO OrderData
+                    VALUES ('{orders.PartID}', '{orders.PartName}');";
+
+            command.ExecuteNonQuery();
+        }
+
+        public void DeleteOrdersDB(Orders order)
+        {
+            var command = connection.CreateCommand();
+            command.CommandText = $@"DELETE FROM OrderData 
+                WHERE PartID='{order.PartID}' AND 
+                PartName='{order.PartName}';";
+
+            command.ExecuteNonQuery();
+        }
+
     }
 }

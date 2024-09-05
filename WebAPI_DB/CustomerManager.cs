@@ -19,22 +19,32 @@
 
         public List<Customer> GetCustomerData()
         {
-            return customerDB.GetAll();
+            return customerDB.GetCustomerAll();
         }
 
-        public void Add(Customer customer)
+        public void AddCustomer(Customer customer)
         {
             customerDB.AddCustomerDB(customer);
         }
 
-        public void Delete(Customer customer)
+        public void DeleteCustomer(Customer customer)
         {
             customerDB.DeleteCustomerDB(customer);
         }
 
         public List<Orders> GetOrders()
         {
-            return orderData;
+            return customerDB.GetOrderAll();
+        }
+
+        public void AddOrder(Orders order)
+        {
+            customerDB.AddOrdersDB(order);
+        }
+
+        public void DeleteOrder(Orders order)
+        {
+            customerDB.DeleteOrdersDB(order);
         }
     }
 }
