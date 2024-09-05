@@ -10,8 +10,11 @@
         public MainViewModel(IUiService uiService)
         {
             UiService = uiService;
-            CustomerDetailsVM = new CustomerDetailsVM(uiService);
-            OrderDetailsVM = new OrderDetailsVM(uiService);
+            CustomerDetailsVM = new CustomerDetailsVM();
+            OrderDetailsVM = new OrderDetailsVM();
+            CustomerDetailsVM.SetUIService(uiService);
+            OrderDetailsVM.SetUIService(uiService);
+
         }
     }
 }

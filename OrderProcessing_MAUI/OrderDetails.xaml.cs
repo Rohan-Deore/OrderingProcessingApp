@@ -4,15 +4,12 @@ namespace OrderProcessing_MAUI;
 
 public partial class OrderDetails : ContentPage
 {
-    public IUiService UiService { get; }
-
     private OrderDetailsVM orderDetailsVM;
 
-    public OrderDetails(MainPage page)
+    public OrderDetails()
 	{
 		InitializeComponent();
-        UiService = new UIService(page);
-        orderDetailsVM = new OrderDetailsVM(UiService);
+        orderDetailsVM = new OrderDetailsVM();
 		Title = orderDetailsVM.TabName;
 	}
 
