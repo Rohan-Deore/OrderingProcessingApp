@@ -11,15 +11,15 @@
 ;General
 
   ;Name and file
-  Name "Modern UI Test"
-  OutFile "Basic.exe"
+  Name "Order Processing App"
+  OutFile "OrderProcessingWPF_Installer.exe"
   Unicode True
 
   ;Default installation folder
-  InstallDir "$LOCALAPPDATA\Modern UI Test"
+  InstallDir "$LOCALAPPDATA\Order Processing App"
   
   ;Get installation folder from registry if available
-  InstallDirRegKey HKCU "Software\Modern UI Test" ""
+  InstallDirRegKey HKCU "Software\Order Processing App" ""
 
   ;Request application privileges for Windows Vista
   RequestExecutionLevel user
@@ -32,7 +32,7 @@
 ;--------------------------------
 ;Pages
 
-  !insertmacro MUI_PAGE_LICENSE "${NSISDIR}\Docs\Modern UI\License.txt"
+  !insertmacro MUI_PAGE_LICENSE "License.txt"
   !insertmacro MUI_PAGE_COMPONENTS
   !insertmacro MUI_PAGE_DIRECTORY
   !insertmacro MUI_PAGE_INSTFILES
@@ -48,14 +48,19 @@
 ;--------------------------------
 ;Installer Sections
 
-Section "Dummy Section" SecDummy
+Section "Base application" SecDummy
 
   SetOutPath "$INSTDIR"
   
   ;ADD YOUR OWN FILES HERE...
-  
+  File "..\OrderProcessingWPF\bin\x64\Development\net8.0-windows\OrderProcessingWPF.exe"
+  File "..\OrderProcessingWPF\bin\x64\Development\net8.0-windows\OrderProcessingWPF.dll"
+  File "..\OrderProcessingWPF\bin\x64\Development\net8.0-windows\Model.dll"
+  File "..\OrderProcessingWPF\bin\x64\Development\net8.0-windows\Newtonsoft.Json.dll"
+  File "..\OrderProcessingWPF\bin\x64\Development\net8.0-windows\ViewModel.dll"
+
   ;Store installation folder
-  WriteRegStr HKCU "Software\Modern UI Test" "" $INSTDIR
+  WriteRegStr HKCU "Software\Order Processing App" "" $INSTDIR
   
   ;Create uninstaller
   WriteUninstaller "$INSTDIR\Uninstall.exe"
@@ -66,7 +71,7 @@ SectionEnd
 ;Descriptions
 
   ;Language strings
-  LangString DESC_SecDummy ${LANG_ENGLISH} "A test section."
+  LangString DESC_SecDummy ${LANG_ENGLISH} "A section"
 
   ;Assign language strings to sections
   !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
@@ -79,11 +84,16 @@ SectionEnd
 Section "Uninstall"
 
   ;ADD YOUR OWN FILES HERE...
+  Delete "$INSTDIR\OrderProcessingWPF.exe"
+  Delete "$INSTDIR\OrderProcessingWPF.dll"
+  Delete "$INSTDIR\Model.dll"
+  Delete "$INSTDIR\Newtonsoft.Json.dll"
+  Delete "$INSTDIR\ViewModel.dll"
 
   Delete "$INSTDIR\Uninstall.exe"
 
   RMDir "$INSTDIR"
 
-  DeleteRegKey /ifempty HKCU "Software\Modern UI Test"
+  DeleteRegKey /ifempty HKCU "Software\Order Processing App"
 
 SectionEnd
