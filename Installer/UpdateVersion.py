@@ -16,12 +16,17 @@ def update_version_prefix(csproj_files, version_file):
         namespace = {'msbuild': 'http://schemas.microsoft.com/developer/msbuild/2003'}
 
         # Find the VersionPrefix element and update its value
-        version_prefix = root.find('.//msbuild:VersionPrefix', namespaces=namespace)
+        property_group = root.find('PropertyGroup')
+        if property_group is None:
+            print('Missing property group')
+            return
+        
+        version_prefix = property_group.find('VersionPrefix')
         if version_prefix is not None:
             version_prefix.text = version
         else:
             # If VersionPrefix doesn't exist, create it
-            property_group = root.find('.//msbuild:PropertyGroup', namespaces=namespace)
+            property_group = root.find('PropertyGroup')
             if property_group is None:
                 property_group = etree.SubElement(root, 'PropertyGroup')
             version_prefix = etree.SubElement(property_group, 'VersionPrefix')
@@ -43,3 +48,4 @@ if __name__ == "__main__":
     version_file = 'Version.txt'
     csproj_files = find_csproj_files(root_directory)
     update_version_prefix(csproj_files, version_file)
+    print('Versions updated.')
