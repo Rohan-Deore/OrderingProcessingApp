@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
@@ -12,36 +12,34 @@
     <UseWinUI>true</UseWinUI>
     <EnableMsixTooling>true</EnableMsixTooling>
     <Configurations>Debug;Release;Development</Configurations>
+    <VersionPrefix>1.2.0.0</VersionPrefix>
   </PropertyGroup>
   <ItemGroup>
-    <None Remove="CustomerDetails.xaml" />
-    <None Remove="OrderControl.xaml" />
-    <None Remove="OrderDetails.xaml" />
+    <None Remove="CustomerDetails.xaml"/>
+    <None Remove="OrderControl.xaml"/>
+    <None Remove="OrderDetails.xaml"/>
   </ItemGroup>
-
   <ItemGroup>
-    <Content Include="Assets\SplashScreen.scale-200.png" />
-    <Content Include="Assets\LockScreenLogo.scale-200.png" />
-    <Content Include="Assets\Square150x150Logo.scale-200.png" />
-    <Content Include="Assets\Square44x44Logo.scale-200.png" />
-    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
-    <Content Include="Assets\StoreLogo.png" />
-    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png"/>
+    <Content Include="Assets\LockScreenLogo.scale-200.png"/>
+    <Content Include="Assets\Square150x150Logo.scale-200.png"/>
+    <Content Include="Assets\Square44x44Logo.scale-200.png"/>
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png"/>
+    <Content Include="Assets\StoreLogo.png"/>
+    <Content Include="Assets\Wide310x150Logo.scale-200.png"/>
   </ItemGroup>
-
   <ItemGroup>
-    <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.1" />
-    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.5.240802000" />
-    <Manifest Include="$(ApplicationManifest)" />
+    <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.1"/>
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.5.240802000"/>
+    <Manifest Include="$(ApplicationManifest)"/>
   </ItemGroup>
-
   <!--
     Defining the "Msix" ProjectCapability here allows the Single-project MSIX Packaging
     Tools extension to be activated for this project even if the Windows App SDK Nuget
     package has not yet been restored.
   -->
   <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
-    <ProjectCapability Include="Msix" />
+    <ProjectCapability Include="Msix"/>
   </ItemGroup>
   <ItemGroup>
     <Page Update="OrderControl.xaml">
@@ -58,7 +56,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-
   <!--
     Defining the "HasPackageAndPublishMenuAddedByProject" property here allows the Solution
     Explorer "Package and Publish" context menu entry to be enabled for this project even if
