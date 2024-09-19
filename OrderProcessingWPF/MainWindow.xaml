@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OrderProcessingWPF"
         mc:Ignorable="d"
-        Title="Order Processing" Height="450" Width="800">
+        Title="Order Processing" Height="450" Width="800" Loaded="Window_Loaded">
 
     <DockPanel>
         <Menu DockPanel.Dock="Top">
@@ -20,6 +20,11 @@
                 <MenuItem Command="ApplicationCommands.Paste"/>
             </MenuItem>
         </Menu>
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem>
+                <TextBlock Name="lblStatusBar" Text="Rohan Deore"/>
+            </StatusBarItem>
+        </StatusBar>
         <Grid>
             <TabControl TabStripPlacement="Left">
                 <TabItem Header="{Binding Path=CustomerDetailsVM.TabName}" Padding="10">

@@ -15,5 +15,11 @@ namespace OrderProcessingWPF
             InitializeComponent();
             DataContext = new MainViewModel(UiService);
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            // Check if user is allowed to run this application
+            lblStatusBar.Text = "Checking..";
+        }
     }
 }
