@@ -20,6 +20,10 @@ namespace OrderProcessingWPF
         {
             // Check if user is allowed to run this application
             lblStatusBar.Text = "Checking..";
+            LicenseChecker checker = new LicenseChecker();
+            var status = checker.GetLicenseStatus();
+            string error = status.Result;
+            lblStatusBar.Text = error;
         }
     }
 }
