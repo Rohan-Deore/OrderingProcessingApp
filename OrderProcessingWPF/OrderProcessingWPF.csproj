@@ -1,5 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
@@ -8,10 +7,9 @@
     <UseWPF>true</UseWPF>
     <Platforms>x64</Platforms>
     <Configurations>Debug;Release;Development</Configurations>
+    <VersionPrefix>1.2.0.0</VersionPrefix>
   </PropertyGroup>
-
   <ItemGroup>
-    <ProjectReference Include="..\VIewModel\ViewModel.csproj" />
+    <ProjectReference Include="..\VIewModel\ViewModel.csproj"/>
   </ItemGroup>
-
 </Project>
