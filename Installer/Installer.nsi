@@ -29,6 +29,8 @@
 
   !define MUI_ABORTWARNING
   !define MUI_ICON "Order_Processing.ico"
+  !define MUI_UNICON "Order_Processing.ico"
+  
 ;--------------------------------
 ;Pages
 
