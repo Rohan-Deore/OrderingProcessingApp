@@ -6,19 +6,19 @@
         xmlns:local="clr-namespace:OrderProcessingWPF"
         mc:Ignorable="d"
         Title="Order Processing" Height="450" Width="800" Loaded="Window_Loaded">
-
+    
     <DockPanel>
-        <Menu DockPanel.Dock="Top">
+        <Menu DockPanel.Dock="Top" FontSize="14">
             <MenuItem Header="_File">
                 <MenuItem Header="New"/>
                 <Separator/>
                 <MenuItem Header="Quit"/>
             </MenuItem>
-            <MenuItem Header="_Edit">
+            <!--<MenuItem Header="_Edit">
                 <MenuItem Command="ApplicationCommands.Copy"/>
                 <MenuItem Command="ApplicationCommands.Cut"/>
                 <MenuItem Command="ApplicationCommands.Paste"/>
-            </MenuItem>
+            </MenuItem>-->
         </Menu>
         <StatusBar DockPanel.Dock="Bottom">
             <StatusBarItem>
@@ -26,11 +26,11 @@
             </StatusBarItem>
         </StatusBar>
         <Grid>
-            <TabControl TabStripPlacement="Left">
-                <TabItem Header="{Binding Path=CustomerDetailsVM.TabName}" Padding="10">
+            <TabControl TabStripPlacement="Left" Background="Red">
+                <TabItem Header="{Binding Path=CustomerDetailsVM.TabName}" Padding="10" Background="Red" FontSize="14">
                     <local:CustomerDetails DataContext="{Binding CustomerDetailsVM}"/>
                 </TabItem>
-                <TabItem Header="{Binding Path=OrderDetailsVM.TabName}" Padding="10">
+                <TabItem Header="{Binding Path=OrderDetailsVM.TabName}" Padding="10" Background="Red" FontSize="14">
                     <local:OrderDetails DataContext="{Binding OrderDetailsVM}"/>
                 </TabItem>
             </TabControl>

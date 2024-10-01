@@ -4,6 +4,10 @@
              xmlns:local="clr-namespace:OrderProcessingWPF"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <!-- Define your background resource here -->
+            <Color x:Key="BackgroundBrush">#FF0000</Color>
+            <!-- A light blue color -->
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

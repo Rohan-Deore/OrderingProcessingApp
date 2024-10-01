@@ -17,11 +17,11 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Button Grid.Column="0" Grid.Row="0" Content="Add product" Margin="3" Width="150" Command="{Binding AddProductCommand}" CommandParameter="{Binding SelectedItem, ElementName=myDataGrid}"/>
-        <Button Grid.Column="1" Grid.Row="0" Content="Remove product" Margin="3" Width="150" Command="{Binding RemoveProductCommand}" CommandParameter="{Binding SelectedItem, ElementName=myDataGrid}"/>
-        <TextBlock Grid.Column="0" Grid.Row="1" Text="Customer Location" Height="30" Margin="3" VerticalAlignment="Center"/>
-        <TextBox Grid.Column="1" Grid.Row="1" Margin="3" Text="{Binding CustomerLocation}"/>
-        <DataGrid Grid.ColumnSpan="2" Grid.Row="2" x:Name="myDataGrid" ItemsSource="{Binding Orders}" AutoGenerateColumns="False" AlternatingRowBackground="Azure" Margin="3" SelectedItem="{Binding SelectedRow, UpdateSourceTrigger=PropertyChanged}">
+        <Button Grid.Column="0" Grid.Row="0" Content="Add product" Margin="3" Width="150" Command="{Binding AddProductCommand}" CommandParameter="{Binding SelectedItem, ElementName=myDataGrid}" FontSize="14"/>
+        <Button Grid.Column="1" Grid.Row="0" Content="Remove product" Margin="3" Width="150" Command="{Binding RemoveProductCommand}" CommandParameter="{Binding SelectedItem, ElementName=myDataGrid}" FontSize="14"/>
+        <TextBlock Grid.Column="0" Grid.Row="1" Text="Customer Location" Height="30" Margin="3" VerticalAlignment="Center" FontSize="14"/>
+        <TextBox Grid.Column="1" Grid.Row="1" Margin="3" Text="{Binding CustomerLocation}" FontSize="14"/>
+        <DataGrid Grid.ColumnSpan="2" Grid.Row="2" x:Name="myDataGrid" ItemsSource="{Binding Orders}" AutoGenerateColumns="False" AlternatingRowBackground="Azure" Margin="3" SelectedItem="{Binding SelectedRow, UpdateSourceTrigger=PropertyChanged}" FontSize="14">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Part ID" Binding="{Binding PartID}"/>
                 <DataGridTextColumn Header="Part Name" Binding="{Binding PartName}"/>
