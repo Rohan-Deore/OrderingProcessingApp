@@ -25,12 +25,15 @@ namespace OrderProcessingWPF
         {
             try
             {
+                var defaultSettings = Properties.Settings.Default;
+
                 HttpClient client = new HttpClient();
 
-                client.BaseAddress = new Uri(@"https://localhost:7015/");
+                client.BaseAddress = new Uri($"{defaultSettings.LicenseServer}");
+                string MachineID = string.Empty;
 
                 // TODO : Remove Hard coded data for testing purpose
-                var responseMessage = client.GetAsync("License/Rohan, Segen, LicenseManager, MachineID");
+                var responseMessage = client.GetAsync($"{defaultSettings.UserName}, {defaultSettings.CompanyName}, {defaultSettings.ApplicationName}, {Environment.MachineName}");
                 HttpResponseMessage response = responseMessage.Result;
                 if (response.IsSuccessStatusCode)
                 {

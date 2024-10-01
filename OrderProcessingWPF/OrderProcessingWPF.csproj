@@ -8,8 +8,25 @@
     <Platforms>x64</Platforms>
     <Configurations>Debug;Release;Development</Configurations>
     <VersionPrefix>1.2.0.0</VersionPrefix>
+    <ApplicationIcon>Order_Processing.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\VIewModel\ViewModel.csproj"/>
+    <Content Include="Order_Processing.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VIewModel\ViewModel.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 </Project>

@@ -29,3 +29,7 @@ This application is using MVVM architecture where views can be WPF or MAUI depen
 ## Web API
 
 There is Web API for database where all modifications done by application are stored in Database and hence support cross platform functionalities.
+
+## Installer
+
+Using NSIS installer to install WPF Order processing app. With basic required infromtation to be modified during creating new installer.
